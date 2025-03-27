@@ -30,7 +30,7 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section
-      id="comentarios"
+      id="depoimentos"
       className="section testimonial bg-gray-100 pt-12 pb-15"
     >
       <div className="container max-w-7xl mx-auto">

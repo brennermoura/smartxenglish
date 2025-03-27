@@ -8,10 +8,10 @@ export function Gallery() {
     "02.jpg",
     "03.jpg",
     "04.jpg",
-    "01.jpg",
-    "02.jpg",
-    "03.jpg",
-    "04.jpg",
+    "05.jpg",
+    "09.jpg",
+    "06.jpg",
+    "07.jpg",
   ];
   const [lightboxIndex, setLightboxIndex] = useState(null);
 
@@ -45,12 +45,17 @@ export function Gallery() {
   }, []);
 
   return (
-    <div className="max-w-7xl mx-auto flex flex-col items-center">
-      <h2 className="textRed font-bold text-4xl uppercase text-center mt-16 mb-10">
-        Se prepare para estar aqui
-      </h2>
+    <div className="max-w-7xl mx-auto flex flex-col items-center" id="fotos">
+      <div className="text-center mt-15">
+        <span className="text-lg text-gray-800 font-semibold">
+          Where we operate
+        </span>
+        <h2 className="textRed font-bold text-4xl uppercase text-center mt-2 mb-10">
+          Se prepare para estar aqui
+        </h2>
+      </div>
 
-      <div className="flex flex-wrap justify-center gap-6">
+      <div className="flex flex-wrap justify-center md:gap-6">
         {images.map((img, index) => (
           <div
             key={index}

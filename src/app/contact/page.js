@@ -24,7 +24,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="bg-red-500 text-white py-15">
+    <section className="bg-red-500 text-white pt-15" id="contatos">
       <div className="container max-w-7xl mx-auto px-6 md:flex md:justify-between gap-12">
         {/* Formulário */}
         <div className="md:w-1/2">
@@ -91,6 +91,13 @@ export default function ContactSection() {
             </a>
           </div>
         </div>
+      </div>
+      <div className="w-full bg-backBlue mx-auto mt-15 py-7 flex items-center justify-center">
+        <img src="/smartxenglishNav.svg" style={{ maxWidth: 200 }} />
+      </div>
+
+      <div id="scroll-to-top" className="scroll-to-top">
+        <span className="icon fa fa-angle-up"></span>
       </div>
     </section>
   );

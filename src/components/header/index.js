@@ -1,15 +1,42 @@
 "use client";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+
+  const handleAnchorClick = useCallback(
+    (e) => {
+      e.preventDefault();
+      const href = e.currentTarget.getAttribute("href");
+
+      if (href.startsWith("#")) {
+        setIsOpen(false); // Fecha o menu antes da rolagem
+
+        setTimeout(() => {
+          // Garante que o menu fechou antes da rolagem
+          const targetElement = document.querySelector(href);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        }, 200);
+      } else {
+        router.push(href);
+      }
+    },
+    [router]
+  );
 
   return (
-    <header className=" px-4 py-5 bg-backBlue text-white border-b-2 border-red-400">
+    <header className="w-full px-4 py-5 bg-backBlue text-white border-b-2 border-red-400">
       <div className="container max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="max-w-40">
@@ -26,22 +53,38 @@ export function Header() {
         <nav className="hidden md:flex">
           <ul className="flex items-center gap-5 uppercase">
             <li>
-              <Link href="/#sobre" className="btn-navbar">
+              <Link
+                href="#sobre"
+                className="btn-navbar"
+                onClick={handleAnchorClick}
+              >
                 Sobre
               </Link>
             </li>
             <li>
-              <Link href="/metodo" className="btn-navbar">
-                Método
+              <Link
+                href="#fotos"
+                className="btn-navbar"
+                onClick={handleAnchorClick}
+              >
+                Galeria
               </Link>
             </li>
             <li>
-              <Link href="/comentarios" className="btn-navbar">
-                Comentários
+              <Link
+                href="#depoimentos"
+                className="btn-navbar"
+                onClick={handleAnchorClick}
+              >
+                Depoimentos
               </Link>
             </li>
             <li>
-              <Link href="/contatos" className="btn-navbar">
+              <Link
+                href="#contatos"
+                className="btn-navbar"
+                onClick={handleAnchorClick}
+              >
                 Contatos
               </Link>
             </li>
@@ -65,36 +108,36 @@ export function Header() {
           <ul className="flex flex-col items-center gap-4 py-4 uppercase">
             <li>
               <Link
-                href="/#sobre"
+                href="#sobre"
                 className="btn-navbar"
-                onClick={() => setIsOpen(false)}
+                onClick={handleAnchorClick}
               >
                 Sobre
               </Link>
             </li>
             <li>
               <Link
-                href="/metodo"
+                href="#fotos"
                 className="btn-navbar"
-                onClick={() => setIsOpen(false)}
+                onClick={handleAnchorClick}
               >
-                Método
+                Galeria
               </Link>
             </li>
             <li>
               <Link
-                href="/comentarios"
+                href="#depoimentos"
                 className="btn-navbar"
-                onClick={() => setIsOpen(false)}
+                onClick={handleAnchorClick}
               >
-                Comentários
+                Depoimentos
               </Link>
             </li>
             <li>
               <Link
-                href="/contatos"
+                href="#contatos"
                 className="btn-navbar"
-                onClick={() => setIsOpen(false)}
+                onClick={handleAnchorClick}
               >
                 Contatos
               </Link>
