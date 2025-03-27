@@ -10,6 +10,27 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
 
+  const smoothScroll = (target) => {
+    const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+    const startPosition = window.scrollY;
+    const distance = targetPosition - startPosition;
+    const duration = 600; // Duração da rolagem em ms
+    let startTime = null;
+
+    function animationScroll(currentTime) {
+      if (!startTime) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1);
+      window.scrollTo(0, startPosition + distance * progress);
+
+      if (timeElapsed < duration) {
+        requestAnimationFrame(animationScroll);
+      }
+    }
+
+    requestAnimationFrame(animationScroll);
+  };
+
   const handleAnchorClick = useCallback(
     (e) => {
       e.preventDefault();
@@ -19,13 +40,10 @@ export function Header() {
         setIsOpen(false); // Fecha o menu antes da rolagem
 
         setTimeout(() => {
-          // Garante que o menu fechou antes da rolagem
+          // Dá um pequeno tempo para fechar antes da rolagem
           const targetElement = document.querySelector(href);
           if (targetElement) {
-            targetElement.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
+            smoothScroll(targetElement);
           }
         }, 200);
       } else {
