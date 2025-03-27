@@ -29,13 +29,16 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="comentarios" className="section testimonial bg-gray-100 py-12">
+    <section
+      id="comentarios"
+      className="section testimonial bg-gray-100 pt-12 pb-15"
+    >
       <div className="container max-w-7xl mx-auto">
         <div className="text-center mb-8">
-          <span className="text-lg text-indigo-600 font-semibold">
+          <span className="text-lg text-gray-800 font-semibold">
             Student Reviews
           </span>
-          <h2 className="text-3xl font-bold mt-2">
+          <h2 className="textRed font-bold text-4xl uppercase text-center mt-2 mb-10">
             Veja o que nossos alunos disseram...
           </h2>
         </div>
@@ -45,7 +48,7 @@ export default function Testimonials() {
               key={index}
               className="bg-white shadow-lg rounded-lg p-6 relative"
             >
-              <div className="absolute top-0 left-0 text-indigo-600 text-4xl p-4">
+              <div className="absolute top-0 left-0 textRed text-4xl p-4">
                 “
               </div>
               <p className="text-gray-700 italic mb-4">{testimonial.text}</p>

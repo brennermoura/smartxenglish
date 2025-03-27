@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMobileAlt } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import Link from "next/link";
 
 import {
   faInstagram,
@@ -23,8 +24,8 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="bg-red-500 text-white py-12">
-      <div className="container max-w-7xl mx-auto px-6 md:flex md:justify-between gap-8">
+    <section className="bg-red-500 text-white py-15">
+      <div className="container max-w-7xl mx-auto px-6 md:flex md:justify-between gap-12">
         {/* Formulário */}
         <div className="md:w-1/2">
           <h2 className="text-4xl font-bold mb-4">Contact Form</h2>
@@ -48,36 +49,46 @@ export default function ContactSection() {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
-          <button
-            onClick={sendToWhatsApp}
-            className="bg-blue-900 px-6 py-3 font-bold"
-          >
+          <button onClick={sendToWhatsApp} className="btn btn-mainn ">
             ENVIAR
           </button>
         </div>
 
         {/* Informações de Contato */}
         <div className="md:w-1/2 mt-6 md:mt-0">
-          <p className="uppercase text-sm">We are Professionals</p>
+          <p className="uppercase text-gray-800 text-sm">
+            We are Professionals
+          </p>
           <h3 className="text-4xl font-bold mt-2">
             Entre em contato conosco para mais detalhes
           </h3>
-          <p className="mt-4 flex items-center">
+          <p className="mt-4 flex items-center text-gray-800">
             <FontAwesomeIcon icon={faInstagram} className="mr-2" /> Instagram:
             @smartxenglish
           </p>
-          <p className="mt-2 flex items-center">
+          <p className="mt-2 flex items-center text-gray-800">
             <FontAwesomeIcon icon={faEnvelope} className="mr-2" /> Email:
             smartxenglish@hotmail.com
           </p>
-          <p className="mt-2 flex items-center">
+          <p className="mt-2 flex items-center text-gray-800">
             <FontAwesomeIcon icon={faMobileAlt} className="mr-2" /> Telefones:
             (21) 97492-4628 | (21) 96764-4652
           </p>
           <div className="flex mt-4 space-x-4 text-xl">
-            <FontAwesomeIcon icon={faInstagram} className="text-2xl" />
-            <FontAwesomeIcon icon={faFacebookF} className="text-2xl" />
-            <FontAwesomeIcon icon={faLinkedin} className="text-2xl" />
+            <a
+              href="https://www.instagram.com/smartxenglish"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-icon"
+            >
+              <FontAwesomeIcon icon={faInstagram} className="text-2xl" />
+            </a>
+            <a href="/" rel="noopener noreferrer" className="btn-icon">
+              <FontAwesomeIcon icon={faFacebookF} className="text-2xl" />
+            </a>
+            <a href="/" rel="noopener noreferrer" className="btn-icon">
+              <FontAwesomeIcon icon={faLinkedin} className="text-2xl" />
+            </a>
           </div>
         </div>
       </div>

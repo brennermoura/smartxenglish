@@ -1,6 +1,6 @@
 import { Header } from "@/components/header";
 import "./globals.css";
-import ContactSection from "./contact/contact";
+import ContactSection from "./contact/page";
 
 export const metadata = {
   title: "SmartXEnglish | Inglês Offshore, Técnico e Profissional",

@@ -26,16 +26,24 @@ export function Header() {
         <nav className="hidden md:flex">
           <ul className="flex items-center gap-5 uppercase">
             <li>
-              <Link href="/#sobre">Sobre</Link>
+              <Link href="/#sobre" className="btn-navbar">
+                Sobre
+              </Link>
             </li>
             <li>
-              <Link href="/metodo">Método</Link>
+              <Link href="/metodo" className="btn-navbar">
+                Método
+              </Link>
             </li>
             <li>
-              <Link href="/comentarios">Comentários</Link>
+              <Link href="/comentarios" className="btn-navbar">
+                Comentários
+              </Link>
             </li>
             <li>
-              <Link href="/contatos">Contatos</Link>
+              <Link href="/contatos" className="btn-navbar">
+                Contatos
+              </Link>
             </li>
           </ul>
         </nav>
@@ -56,22 +64,38 @@ export function Header() {
         >
           <ul className="flex flex-col items-center gap-4 py-4 uppercase">
             <li>
-              <Link href="/#sobre" onClick={() => setIsOpen(false)}>
+              <Link
+                href="/#sobre"
+                className="btn-navbar"
+                onClick={() => setIsOpen(false)}
+              >
                 Sobre
               </Link>
             </li>
             <li>
-              <Link href="/metodo" onClick={() => setIsOpen(false)}>
+              <Link
+                href="/metodo"
+                className="btn-navbar"
+                onClick={() => setIsOpen(false)}
+              >
                 Método
               </Link>
             </li>
             <li>
-              <Link href="/comentarios" onClick={() => setIsOpen(false)}>
+              <Link
+                href="/comentarios"
+                className="btn-navbar"
+                onClick={() => setIsOpen(false)}
+              >
                 Comentários
               </Link>
             </li>
             <li>
-              <Link href="/contatos" onClick={() => setIsOpen(false)}>
+              <Link
+                href="/contatos"
+                className="btn-navbar"
+                onClick={() => setIsOpen(false)}
+              >
                 Contatos
               </Link>
             </li>

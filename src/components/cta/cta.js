@@ -7,11 +7,11 @@ export function Cta() {
       <div className="container mx-auto relative z-10 flex justify-center">
         <div className="w-full lg:w-1/2 p-4">
           <div className="bg-white/75 shadow-lg rounded-xl p-10  h-full flex flex-col">
-            <p className="textRed font-bold">Talk to us right now</p>
+            <p className="text-lg textBlue font-bold">Talk to us right now</p>
             <h4 className="mt-4 mb-5 text-4xl font-semibold">
               Aprenda inglês do jeito certo! Seu futuro agradece.
             </h4>
-            <p className="uppercase">Entre em contato:</p>
+            <p className="textBlue text-lg font-bold">Entre em contato</p>
             <h4 className="mt-4 text-4xl font-semibold flex items-baseline">
               <FontAwesomeIcon
                 icon={faMobileScreen}

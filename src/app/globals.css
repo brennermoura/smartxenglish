@@ -81,11 +81,27 @@ li {
   border-radius: 0;
   transition: 0.3s;
 }
-.btn.btn-icon i {
-  font-size: 16px;
-  vertical-align: middle;
-  margin-right: 5px;
+
+.btn-icon {
+  color: #fff;
+  transition: all 0.2s ease;
 }
+.btn-icon:hover,
+.btn-small:hover,
+.btn-transparent:hover {
+  color: rgb(13, 36, 90);
+}
+
+.btn-navbar {
+  color: #fff;
+  transition: all 0.2s ease;
+}
+.btn-navbar:hover,
+.btn-small:hover,
+.btn-transparent:hover {
+  color: #f52626;
+}
+
 .btn:focus {
   outline: 0px;
   box-shadow: none;
