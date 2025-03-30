@@ -60,10 +60,10 @@ export function Header() {
         <div className="max-w-40">
           <Image
             src="/smartxenglishNav.svg"
-            alt="Descrição da logo"
+            alt="SmartX English Logo"
             width={200}
             height={100}
-            layout="responsive"
+            priority
           />
         </div>
 

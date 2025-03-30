@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 export default function About() {
@@ -24,7 +25,7 @@ export default function About() {
             alt="Descrição da logo"
             width={1376}
             height={740}
-            layout="responsive"
+            priority
           />
         </div>
       </div>

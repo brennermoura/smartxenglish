@@ -5,6 +5,7 @@ import NossosCursos from "@/components/cards/cards-cursos";
 import { Cta } from "@/components/cta/cta";
 import Testimonials from "@/components/testimonials/testimonials";
 import Counter from "@/components/counter/counter";
+import DownloadSection from "@/components/cta/downloads";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Counter />
       <NossosCursos />
       <Cta />
+      <DownloadSection />
       <Testimonials />
     </div>
   );

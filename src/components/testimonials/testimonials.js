@@ -2,6 +2,20 @@ import Image from "next/image";
 
 const testimonials = [
   {
+    name: "Hellen Rebelo",
+    role: "Segurança do trabalho - Capco",
+    image: "/team/hellen-rabelo.jpg",
+    text: [
+      "Aprender inglês foi um divisor de águas na minha trajetória profissional. Inicialmente, vi o idioma como um diferencial, mas logo percebi que ele era essencial para novas oportunidades. Com o inglês, melhorei a comunicação com supervisores e colegas internacionais, acessei conteúdos e cursos que ampliaram meus conhecimentos e me destaquei no mercado. Além disso, participei de reuniões, eventos e projetos globais, o que me deu mais confiança e abriu portas para promoções e desafios maiores. Hoje, vejo o inglês como uma ferramenta poderosa que transformou minha carreira. Se eu pudesse dar um conselho: invista no seu inglês! O retorno é certo e as oportunidades são infinitas.",
+    ],
+  },
+  {
+    name: "Tamiris Ramos Antonio",
+    role: "Piloto de ROV - Subsea 7",
+    image: "/team/tamires-ramos.jpg",
+    text: "Aprender inglês sempre foi um desafio para mim. Passei por outros cursos sem sucesso,  acreditando ser impossível aprender outro idioma, até que encontrei o professor Rafael Carloto. Com ele, tudo mudou! As aulas são tão leves e envolventes que o tempo voa, e quando vejo, já acabou – e eu queria mais! Ele tem uma didática incrível, explica tudo de um jeito claro e ainda consegue deixar o aprendizado divertido. Além de inteligente, é uma pessoa agradável e bem-humorada, o que faz toda a diferença. Finalmente estou aprendendo inglês e, pela primeira vez, curtindo o processo! Indico para todos, sem dúvidas.",
+  },
+  {
     name: "Raquel Oliveira",
     role: "Business Partner - Ambev",
     image: "/team/raquel-oliveira.jpg",
@@ -23,7 +37,7 @@ const testimonials = [
     name: "Cris Coelho",
     role: "Marketing manager - Oceânica engenharia e consultoria SA",
     image: "/team/criscoelho.jpg",
-    text: "Rafael is the best teacher that I have ever had in my entire life. He explains English with a unique and exclusive method that shows me what real English is. Now I can understand English because of him. Thanks, Rafael!",
+    text: "Rafael is the best teacher  I have ever had. He explains English with a unique and exclusive method that shows me what's the real English. Now I can understand English because of him. Thanks, Rafael!",
   },
 ];
 
@@ -42,19 +56,30 @@ export default function Testimonials() {
             Veja o que nossos alunos disseram...
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg rounded-lg p-6 relative"
+              className={`bg-white shadow-lg rounded-lg p-6 relative md:px-15 ${
+                index === 0 ? "" : ""
+              }`}
             >
-              <div className="absolute top-0 left-0 textRed text-4xl p-4">
+              <div className="absolute top-0 left-0 textRed text-4xl py-4 px-10">
                 “
               </div>
-              <p className="text-gray-700 italic mb-4">{testimonial.text}</p>
+              {/* Se o texto for um array, exibe vários parágrafos */}
+              {Array.isArray(testimonial.text) ? (
+                testimonial.text.map((paragraph, idx) => (
+                  <p key={idx} className="text-gray-700 italic mb-4">
+                    {paragraph}
+                  </p>
+                ))
+              ) : (
+                <p className="text-gray-700 italic mb-4">{testimonial.text}</p>
+              )}
               <div className="flex items-center">
                 <div className="w-16 h-16 relative mr-4">
-                  <Image
+                  <img
                     src={testimonial.image}
                     alt={testimonial.name}
                     layout="fill"

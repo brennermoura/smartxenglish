@@ -83,10 +83,20 @@ export default function ContactSection() {
             >
               <FontAwesomeIcon icon={faInstagram} className="text-2xl" />
             </a>
-            <a href="/" rel="noopener noreferrer" className="btn-icon">
+            <a
+              href="/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-icon"
+            >
               <FontAwesomeIcon icon={faFacebookF} className="text-2xl" />
             </a>
-            <a href="/" rel="noopener noreferrer" className="btn-icon">
+            <a
+              href="https://www.linkedin.com/in/rafael-carloto-b9437b98/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-icon"
+            >
               <FontAwesomeIcon icon={faLinkedin} className="text-2xl" />
             </a>
           </div>

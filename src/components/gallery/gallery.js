@@ -51,7 +51,7 @@ export function Gallery() {
           Where we operate
         </span>
         <h2 className="textRed font-bold text-4xl uppercase text-center mt-2 mb-10">
-          Se prepare para estar aqui
+          Orientamos você para trabalhar aqui
         </h2>
       </div>
 
