@@ -32,24 +32,24 @@ export default function ContactSection() {
           <input
             type="text"
             placeholder="Seu nome"
-            className="w-full bg-transparent border-white border p-3 mb-4 text-white placeholder-white"
+            className="w-full bg-transparent border-white border p-3 mb-4 text-white placeholder-white outline-white"
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <input
             type="email"
             placeholder="Endereço de email"
-            className="w-full bg-transparent border-white border p-3 mb-4 text-white placeholder-white"
+            className="w-full bg-transparent border-white border p-3 mb-4 text-white placeholder-white outline-white"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <textarea
             placeholder="Digite sua mensagem"
-            className="w-full bg-transparent border-white border p-3 mb-4 text-white placeholder-white"
+            className="w-full bg-transparent border-white border p-3 mb-4 text-white placeholder-white outline-white"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
-          <button onClick={sendToWhatsApp} className="btn btn-mainn ">
+          <button onClick={sendToWhatsApp} className="btn btn-mainn">
             ENVIAR
           </button>
         </div>

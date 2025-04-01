@@ -82,17 +82,20 @@ const cursos = [
 const NossosCursos = () => {
   return (
     <>
-      <div id="cursos" className="container max-w-7xl mx-auto mb-16">
-        <div className="text-center mt-15">
+      <div
+        id="cursos"
+        className="container max-w-7xl mx-auto mb-16 pt-15 px-6 md:px-0"
+      >
+        <div className="md:text-center ">
           <span className="text-lg text-gray-800 font-semibold">
             Offshore English
           </span>
-          <h2 className="textRed font-bold text-4xl uppercase text-center mt-2 mb-8">
+          <h2 className="textRed font-bold text-4xl uppercase mt-2 mb-8">
             Do básico ao avançado
           </h2>
         </div>
 
-        <p className="md:px-15 text-center text-lg mb-12 text-gray-800">
+        <p className="md:px-15 md:text-center text-lg mb-12 text-gray-800">
           O Inglês é uma ferramenta essencial no mercado de trabalho atual,
           especialmente em um cenário global cada vez mais interconectado. É
           fundamental para qualquer profissional que deseja prosperar no mercado

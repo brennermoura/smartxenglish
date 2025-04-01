@@ -10,8 +10,53 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
 
+  // const smoothScroll = (target) => {
+  //   const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+  //   const startPosition = window.scrollY;
+  //   const distance = targetPosition - startPosition;
+  //   const duration = 600; // Duração da rolagem em ms
+  //   let startTime = null;
+
+  //   function animationScroll(currentTime) {
+  //     if (!startTime) startTime = currentTime;
+  //     const timeElapsed = currentTime - startTime;
+  //     const progress = Math.min(timeElapsed / duration, 1);
+  //     window.scrollTo(0, startPosition + distance * progress);
+
+  //     if (timeElapsed < duration) {
+  //       requestAnimationFrame(animationScroll);
+  //     }
+  //   }
+
+  //   requestAnimationFrame(animationScroll);
+  // };
+
+  // const handleAnchorClick = useCallback(
+  //   (e) => {
+  //     e.preventDefault();
+  //     const href = e.currentTarget.getAttribute("href");
+
+  //     if (href.startsWith("#")) {
+  //       setIsOpen(false); // Fecha o menu antes da rolagem
+
+  //       setTimeout(() => {
+  //         // Dá um pequeno tempo para fechar antes da rolagem
+  //         const targetElement = document.querySelector(href);
+  //         if (targetElement) {
+  //           smoothScroll(targetElement);
+  //         }
+  //       }, 200);
+  //     } else {
+  //       router.push(href);
+  //     }
+  //   },
+  //   [router]
+  // );
+
   const smoothScroll = (target) => {
-    const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+    const navbarHeight = document.querySelector("header").offsetHeight; // Captura a altura da navbar
+    const targetPosition =
+      target.getBoundingClientRect().top + window.scrollY - navbarHeight - 0; // Ajusta a posição para compensar a navbar
     const startPosition = window.scrollY;
     const distance = targetPosition - startPosition;
     const duration = 600; // Duração da rolagem em ms
@@ -54,7 +99,7 @@ export function Header() {
   );
 
   return (
-    <header className="w-full px-4 py-5 bg-backBlue text-white border-b-2 border-red-400">
+    <header className="w-full px-4 py-5 bg-backBlue text-white border-b-2 border-red-400 fixed z-30 top-0 start-0">
       <div className="container max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="max-w-40">
@@ -86,6 +131,24 @@ export function Header() {
                 onClick={handleAnchorClick}
               >
                 Galeria
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#cursos"
+                className="btn-navbar"
+                onClick={handleAnchorClick}
+              >
+                Cursos
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#downloads"
+                className="btn-navbar"
+                onClick={handleAnchorClick}
+              >
+                Apostilas
               </Link>
             </li>
             <li>
@@ -142,6 +205,25 @@ export function Header() {
                 Galeria
               </Link>
             </li>
+            <li>
+              <Link
+                href="#cursos"
+                className="btn-navbar"
+                onClick={handleAnchorClick}
+              >
+                Cursos
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#downloads"
+                className="btn-navbar"
+                onClick={handleAnchorClick}
+              >
+                Apostilas
+              </Link>
+            </li>
+
             <li>
               <Link
                 href="#depoimentos"

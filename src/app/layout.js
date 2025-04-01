@@ -1,6 +1,4 @@
-import { Header } from "@/components/header";
 import "./globals.css";
-import ContactSection from "./contact/page";
 
 export const metadata = {
   title: "SmartXEnglish | Inglês Offshore, Técnico e Profissional",
@@ -43,11 +41,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="antialiased">
-        <Header />
-        {children}
-        <ContactSection />
-      </body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

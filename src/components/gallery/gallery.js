@@ -55,7 +55,7 @@ export function Gallery() {
         </h2>
       </div>
 
-      <div className="flex flex-wrap justify-center md:gap-6">
+      <div className="flex flex-wrap justify-center gap-6">
         {images.map((img, index) => (
           <div
             key={index}
@@ -80,7 +80,7 @@ export function Gallery() {
           <div className="relative p-6 bg-gray-900 rounded-lg max-w-3xl mx-auto flex flex-col items-center">
             {/* Botão Fechar */}
             <button
-              className="absolute top-3 right-3 text-white bg-gray-700/50 p-2 rounded-full hover:bg-gray-800/50"
+              className="absolute top-3 right-7 md:right-3 text-white bg-gray-700/50 p-2 rounded-full hover:bg-gray-800/50"
               onClick={closeLightbox}
             >
               <X size={24} />
@@ -88,7 +88,7 @@ export function Gallery() {
 
             {/* Botão Anterior */}
             <button
-              className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white bg-gray-700/50 p-2 rounded-full hover:bg-gray-800/50"
+              className="absolute left-7 md:left-3 top-1/2 transform -translate-y-1/2 text-white bg-gray-700/50 p-2 rounded-full hover:bg-gray-800/50"
               onClick={prevImage}
             >
               <ChevronLeft size={32} />
@@ -103,7 +103,7 @@ export function Gallery() {
 
             {/* Botão Próximo */}
             <button
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-white bg-gray-700/50 p-2 rounded-full hover:bg-gray-800/50"
+              className="absolute right-7 md:right-3 top-1/2 transform -translate-y-1/2 text-white bg-gray-700/50 p-2 rounded-full hover:bg-gray-800/50"
               onClick={nextImage}
             >
               <ChevronRight size={32} />

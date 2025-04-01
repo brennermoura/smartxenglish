@@ -47,16 +47,16 @@ export default function Testimonials() {
       id="depoimentos"
       className="section testimonial bg-gray-100 pt-12 pb-15"
     >
-      <div className="container max-w-7xl mx-auto">
-        <div className="text-center mb-8">
+      <div className="container max-w-7xl mx-auto px-5 md:px-0">
+        <div className="md:text-center mb-8">
           <span className="text-lg text-gray-800 font-semibold">
             Student Reviews
           </span>
-          <h2 className="textRed font-bold text-4xl uppercase text-center mt-2 mb-10">
+          <h2 className="textRed font-bold text-4xl uppercase mt-2 mb-10">
             Veja o que nossos alunos disseram...
           </h2>
         </div>
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
@@ -64,18 +64,20 @@ export default function Testimonials() {
                 index === 0 ? "" : ""
               }`}
             >
-              <div className="absolute top-0 left-0 textRed text-4xl py-4 px-10">
+              <div className="absolute top-0 left-0 textRed text-4xl md:py-4 md:px-10 py-2 px-5">
                 “
               </div>
               {/* Se o texto for um array, exibe vários parágrafos */}
               {Array.isArray(testimonial.text) ? (
                 testimonial.text.map((paragraph, idx) => (
-                  <p key={idx} className="text-gray-700 italic mb-4">
+                  <p key={idx} className="text-gray-700 italic mb-4 text-lg">
                     {paragraph}
                   </p>
                 ))
               ) : (
-                <p className="text-gray-700 italic mb-4">{testimonial.text}</p>
+                <p className="text-gray-700 italic mb-4 text-lg">
+                  {testimonial.text}
+                </p>
               )}
               <div className="flex items-center">
                 <div className="w-16 h-16 relative mr-4">

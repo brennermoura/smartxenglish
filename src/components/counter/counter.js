@@ -77,14 +77,14 @@ const Counter = () => {
           <span className="text-lg text-gray-800 font-semibold">
             Growth Metrics
           </span>
-          <h2 className="text-white font-bold text-4xl uppercase text-center mt-2 mb-4">
+          <h2 className="text-white font-bold text-4xl uppercase text-center mt-2 mb-4 px-5 md:px-0">
             Nossa história em números
           </h2>
         </div>
 
-        <div className="flex flex-col items-center md:flex-row justify-around gap-8 md:gap-0">
+        <div className="flex flex-col items-center md:flex-row justify-around gap-12 md:gap-0">
           <div className="text-center md:text-left">
-            <h3 className="text-5xl font-bold text-gray-800 flex items-center justify-center md:justify-start">
+            <h3 className="text-7xl md:text-5xl font-bold text-gray-800 flex items-center justify-center md:justify-start">
               <span ref={yearsRef}>0</span>
               <span className=" ml-2 text-2xl font-bold text-gray-800">
                 {" "}
@@ -94,21 +94,21 @@ const Counter = () => {
             <span className="text-lg text-gray-100">Ensinando Inglês</span>
           </div>
           <div className="text-center md:text-left">
-            <h3 className="text-5xl font-bold text-gray-800 flex items-center justify-center md:justify-start">
+            <h3 className="text-7xl md:text-5xl font-bold text-gray-800 flex items-center justify-center md:justify-start">
               <span ref={studentsRef}>0</span>
               <span className="ml-2 text-2xl font-bold text-gray-800"> +</span>
             </h3>
             <span className="text-lg text-gray-100">Alunos Mentorados</span>
           </div>
           <div className="text-center md:text-left">
-            <h3 className="text-5xl font-bold text-gray-800 flex items-center justify-center md:justify-start">
+            <h3 className="text-7xl md:text-5xl font-bold text-gray-800 flex items-center justify-center md:justify-start">
               <span ref={hoursRef}>0</span>
               <span className="ml-2 text-2xl font-bold text-gray-800"> +</span>
             </h3>
             <span className="text-lg text-gray-100">Horas de Aula</span>
           </div>
           <div className="text-center md:text-left">
-            <h3 className="text-5xl font-bold text-gray-800 flex items-center justify-center md:justify-start">
+            <h3 className="text-7xl md:text-5xl font-bold text-gray-800 flex items-center justify-center md:justify-start">
               <span ref={companiesRef}>0</span>
               <span className="ml-2 text-2xl font-bold text-gray-800"> +</span>
             </h3>
