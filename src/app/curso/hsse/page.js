@@ -7,7 +7,7 @@ export default function HSSE() {
   return (
     <>
       <Header />
-      <div className="container max-w-7xl mx-auto py-10 text-gray-800">
+      <div className="container max-w-7xl mx-auto py-10 text-gray-800 px-5 md:px-0 mt-20">
         <h1 className="text-3xl font-bold mb-4">
           HSSE - Saúde, Segurança, Segurança Física e Meio Ambiente
         </h1>

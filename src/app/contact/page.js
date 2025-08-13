@@ -17,7 +17,7 @@ export default function ContactSection() {
   const [message, setMessage] = useState("");
 
   const sendToWhatsApp = () => {
-    const phoneNumber = "5521974924628"; // Coloque o número do WhatsApp aqui
+    const phoneNumber = "5521974924628";
     const text = `Nome: ${name}%0AEmail: ${email}%0AMensagem: ${message}`;
     const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${text}`;
     window.open(url, "_blank");
@@ -63,16 +63,16 @@ export default function ContactSection() {
             Entre em contato conosco para mais detalhes
           </h3>
           <p className="mt-4 flex items-center text-gray-800">
-            <FontAwesomeIcon icon={faInstagram} className="mr-2" /> Instagram:
+            <FontAwesomeIcon icon={faInstagram} className="mr-2" />{" "}
             @smartxenglish
           </p>
           <p className="mt-2 flex items-center text-gray-800">
-            <FontAwesomeIcon icon={faEnvelope} className="mr-2" /> Email:
-            smartxenglish@hotmail.com
+            <FontAwesomeIcon icon={faEnvelope} className="mr-2" />{" "}
+            atendimento@smartxenglish.com.br | smartxenglish@hotmail.com
           </p>
           <p className="mt-2 flex items-center text-gray-800">
-            <FontAwesomeIcon icon={faMobileAlt} className="mr-2" /> Telefones:
-            (21) 97492-4628 | (21) 96764-4652
+            <FontAwesomeIcon icon={faMobileAlt} className="mr-2" /> (21)
+            97170-3501 | (21) 96764-4652
           </p>
           <div className="flex mt-4 space-x-4 text-xl">
             <a

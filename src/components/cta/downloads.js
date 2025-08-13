@@ -6,7 +6,7 @@ export default function DownloadSection() {
     >
       <div className="md:text-center ">
         <span className="text-lg text-gray-800 font-semibold">
-          Materials Download
+          Materials for download
         </span>
         <h2 className="textRed font-bold text-4xl uppercase mt-2 mb-8">
           Conheça nosso acervo

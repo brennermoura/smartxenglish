@@ -2,6 +2,24 @@ import Image from "next/image";
 
 const testimonials = [
   {
+    name: "Adrielle Félix",
+    role: "Analista financeira - Mareste",
+    image: "/team/adrielle-felix.jpg",
+    text: [
+      "As aulas de inglês financeiro são muito bem estruturadas e alinhadas com o que o mercado precisa hoje. O conteúdo é bem prático, vai desde o vocabulário técnico até as expressões que a gente realmente usa no dia a dia das finanças. O professor Rafael tem uma didática muito boa, facilitando a compreensão dos termos mais complexos e colocando em contextos reais, o que ajuda muito a fixar o aprendizado. Recomendo a quem deseja aprender ou aprimorar o inglês para o ambiente corporativo e financeiro.",
+    ],
+  },
+
+  {
+    name: "Waldean da Silva Frazão",
+    role: "Operador II - Tecab",
+    image: "/team/waldean-silva.jpg",
+    text: [
+      "As aulas são bem dinâmicas e objetivas, com esclarecimento de todas as dúvidas dos alunos. Um ponto bastante positivo, na minha opinião, é o apoio que é oferecido fora do horário de aula, tanto com as atividades quanto no aspecto pessoal e profissional. Recomendo demais!",
+    ],
+  },
+
+  {
     name: "Hellen Rebelo",
     role: "Segurança do trabalho - Capco",
     image: "/team/hellen-rabelo.jpg",
@@ -9,6 +27,7 @@ const testimonials = [
       "Aprender inglês foi um divisor de águas na minha trajetória profissional. Inicialmente, vi o idioma como um diferencial, mas logo percebi que ele era essencial para novas oportunidades. Com o inglês, melhorei a comunicação com supervisores e colegas internacionais, acessei conteúdos e cursos que ampliaram meus conhecimentos e me destaquei no mercado. Além disso, participei de reuniões, eventos e projetos globais, o que me deu mais confiança e abriu portas para promoções e desafios maiores. Hoje, vejo o inglês como uma ferramenta poderosa que transformou minha carreira. Se eu pudesse dar um conselho: invista no seu inglês! O retorno é certo e as oportunidades são infinitas.",
     ],
   },
+
   {
     name: "Tamiris Ramos Antonio",
     role: "Piloto de ROV - Subsea 7",
@@ -50,7 +69,7 @@ export default function Testimonials() {
       <div className="container max-w-7xl mx-auto px-5 md:px-0">
         <div className="md:text-center mb-8">
           <span className="text-lg text-gray-800 font-semibold">
-            Student Reviews
+            Student's Review
           </span>
           <h2 className="textRed font-bold text-4xl uppercase mt-2 mb-10">
             Veja o que nossos alunos disseram...

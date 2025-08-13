@@ -7,7 +7,7 @@ export default function ISGOTT() {
   return (
     <>
       <Header />
-      <div className="container max-w-7xl mx-auto py-10 text-gray-800">
+      <div className="container max-w-7xl mx-auto py-10 text-gray-800 px-5 md:px-0 mt-20 px-5 md:px-0 mt-20">
         <h1 className="text-3xl font-bold mb-4">
           ISGOTT - Guia Internacional de Segurança para Navios-Tanque e
           Terminais

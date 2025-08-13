@@ -7,7 +7,7 @@ export default function InglesFinanceiro() {
   return (
     <>
       <Header />
-      <div className="container max-w-7xl mx-auto py-10 text-gray-800">
+      <div className="container max-w-7xl mx-auto py-10 text-gray-800 px-5 md:px-0 mt-20">
         <h1 className="text-3xl font-bold mb-4">Inglês Financeiro</h1>
         <p className="mb-4">
           O <strong>Inglês Financeiro</strong> é uma ferramenta crucial no

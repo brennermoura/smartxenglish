@@ -49,7 +49,7 @@ const Counter = () => {
       },
       {
         root: null, // viewport como root
-        threshold: 0.7, // 50% da seção visível
+        threshold: 0.5, // 50% da seção visível
       }
     );
 

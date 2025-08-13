@@ -56,24 +56,22 @@ export function Hero() {
       className="slider h-screen text-center transition-all duration-300"
       style={{ paddingTop }}
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto px-5 md:px-0">
         <div className="max-w-50 mx-auto">
-          <Image
-            src="/rounded-logo-black.png"
+          <img
+            src="rounded-logo-black.png"
             alt="Logo"
-            width={200}
-            height={200}
             className="z-10 relative"
           />
         </div>
-        <h2 className="md:px-15 text-gray-50 text-5xl relative z-10 mt-10 mb-4 uppercase">
+        <h2 className="md:px-15 text-gray-50 text-4xl md:text-5xl relative z-10 mt-10 mb-4 uppercase">
           Teaching is our business.
         </h2>
-        <h2 className="md:px-15 text-gray-50 text-4xl relative z-10 mt-4 mb-10">
+        <h2 className="md:px-15 text-gray-50 text-3xl md:text-4xl relative z-10 mt-4 mb-10">
           Somos especialistas em offshore!
         </h2>
         <Link
-          href="#sobre"
+          href="#contatos"
           className="z-10 text-white btn-main font-medium text-sm px-10 py-4 text-center me-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 animated fadeInUp btn-round-full scrollSuave relative"
         >
           <span>Fale com a gente</span>

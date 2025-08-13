@@ -12,7 +12,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.smartxenglish.com/assets/smartxenglish-banner.jpg",
+        url: "https://www.smartxenglish.com.br/assets/smartxenglish-banner.jpg",
         width: 1200,
         height: 630,
         alt: "SmartXEnglish - Inglês Offshore e Técnico",

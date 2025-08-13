@@ -17,7 +17,7 @@ export function Cta() {
                 icon={faMobileScreen}
                 className="textRed w-[20px] h-[20px] mr-2"
               />
-              21 97492-4628
+              21 97170-3501
             </h4>
             <h4 className="mt-4 text-3xl md:text-4xl font-semibold flex items-baseline">
               <FontAwesomeIcon
